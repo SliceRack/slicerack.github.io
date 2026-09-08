@@ -67,6 +67,17 @@
   }
   .cta:hover { transform: translateY(-2px); }
   .cta-note { display: block; margin-top: 12px; font-size: 13px; font-weight: 600; opacity: 0.85; }
+  .shot-wrap { text-align: center; margin-top: -46px; position: relative; z-index: 2; padding: 0 24px; }
+  .shot-wrap img {
+    width: min(300px, 78vw);
+    border-radius: 38px;
+    border: 5px solid rgba(255,255,255,0.85);
+    box-shadow: 0 24px 60px rgba(16, 34, 53, 0.30);
+  }
+  @media (prefers-color-scheme: dark) {
+    .shot-wrap img { border-color: rgba(255,255,255,0.18); }
+  }
+  .shot-caption { text-align: center; font-size: 13px; color: var(--muted); font-weight: 600; margin-top: 14px; }
   main { max-width: 960px; margin: 0 auto; padding: 56px 24px; }
   .intro {
     text-align: center;
@@ -133,6 +144,11 @@
   <a class="cta" href="https://testflight.apple.com/join/xAyBe1hD">Join the free beta on TestFlight</a>
   <span class="cta-note">Free during beta · iPhone &amp; iPad · No account or sign-up — just a family code</span>
 </header>
+
+<div class="shot-wrap">
+  <img src="today.jpg" width="720" height="1565" alt="Anchor's Today screen: tonight's house with drop-off and pick-up, the weather with an outfit hint, each kid's chip, a daily encouragement, and a pending sleepover request.">
+  <p class="shot-caption">The Today screen — tonight's house, rides, weather, and what the kids are asking for.</p>
+</div>
 
 <main>
   <p class="intro"><strong>Built by a parent, tested by real families.</strong> Anchor started as one family's answer to the group-chat-and-fridge-calendar shuffle and grew into a shared home base for custody schedules, school, and sports — where kids aren't just names on a calendar, they're users too.</p>
