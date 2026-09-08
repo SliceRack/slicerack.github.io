@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anchor — one calm place for your family's week</title>
+<meta name="description" content="Anchor keeps custody nights, school work, sports schedules, and rides in one app the whole family shares — parents and kids. Free beta on TestFlight.">
+<style>
+  :root {
+    --pink: #F72585;
+    --blue: #2B8FD6;
+    --sky: #5AC8FA;
+    --lime: #7ED957;
+    --ink: #1c2733;
+    --paper: #f5f7fa;
+    --card: #ffffff;
+    --muted: #5b6b7b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #eef2f6;
+      --paper: #10161d;
+      --card: #1a222c;
+      --muted: #9fb0c0;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "Segoe UI", Roboto, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  .hero {
+    background: linear-gradient(135deg, var(--pink) 0%, var(--blue) 55%, var(--sky) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 72px 24px 84px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before, .hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.10);
+  }
+  .hero::before { width: 420px; height: 420px; top: -160px; right: -120px; }
+  .hero::after  { width: 340px; height: 340px; bottom: -140px; left: -100px; }
+  .hero > * { position: relative; z-index: 1; }
+  .hero .mark { font-size: 76px; line-height: 1; filter: drop-shadow(0 8px 18px rgba(0,0,0,0.25)); }
+  .hero h1 { font-size: 46px; font-weight: 800; letter-spacing: -0.5px; margin-top: 10px; }
+  .hero p.tag { font-size: 21px; font-weight: 600; max-width: 560px; margin: 12px auto 0; opacity: 0.95; }
+  .hero p.sub { font-size: 15px; font-weight: 500; max-width: 560px; margin: 10px auto 0; opacity: 0.85; }
+  .cta {
+    display: inline-block;
+    margin-top: 28px;
+    background: #fff;
+    color: var(--blue);
+    font-size: 17px;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.22);
+    transition: transform 0.15s ease;
+  }
+  .cta:hover { transform: translateY(-2px); }
+  .cta-note { display: block; margin-top: 12px; font-size: 13px; font-weight: 600; opacity: 0.85; }
+  main { max-width: 960px; margin: 0 auto; padding: 56px 24px; }
+  .intro {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 48px;
+    font-size: 17px;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .intro strong { color: var(--ink); }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 2px 10px rgba(16, 34, 53, 0.06);
+  }
+  .card .emoji { font-size: 30px; }
+  .card h3 { font-size: 16.5px; font-weight: 800; margin: 10px 0 4px; }
+  .card p { font-size: 14px; color: var(--muted); font-weight: 500; }
+  .privacy-strip {
+    margin-top: 56px;
+    background: var(--card);
+    border-radius: 22px;
+    padding: 34px 30px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(16, 34, 53, 0.06);
+  }
+  .privacy-strip h2 { font-size: 22px; font-weight: 800; }
+  .privacy-strip p { max-width: 620px; margin: 10px auto 0; font-size: 15px; color: var(--muted); font-weight: 500; }
+  .privacy-strip a { color: var(--blue); font-weight: 700; text-decoration: none; }
+  .beta-note {
+    margin-top: 26px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  footer {
+    text-align: center;
+    padding: 34px 24px 44px;
+    font-size: 13.5px;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  footer a { color: var(--blue); text-decoration: none; font-weight: 700; }
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 38px; }
+    .hero p.tag { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="mark">⚓️</div>
+  <h1>Anchor</h1>
+  <p class="tag">One calm place for your family's week.</p>
+  <p class="sub">Whose house tonight, Wednesday's practice, Friday's math test, and who's driving — in one app that parents <em>and</em> kids actually use.</p>
+  <a class="cta" href="TESTFLIGHT_LINK_HERE">Join the free beta on TestFlight</a>
+  <span class="cta-note">Free during beta · iPhone &amp; iPad · No account or sign-up — just a family code</span>
+</header>
+
+<main>
+  <p class="intro"><strong>Built by a parent, tested by real families.</strong> Anchor started as one family's answer to the group-chat-and-fridge-calendar shuffle and grew into a shared home base for custody schedules, school, and sports — where kids aren't just names on a calendar, they're users too.</p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="emoji">🏠</div>
+      <h3>Whose house tonight</h3>
+      <p>Custody nights at a glance, months ahead. Handles blended families where each kid has their own arrangement — and skips all of it for one-home households.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">📚</div>
+      <h3>School, handled</h3>
+      <p>Tests, quizzes, and homework checklists. Kids can add their own — they usually know before you do.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">📸</div>
+      <h3>Smart Import</h3>
+      <p>Screenshot the teacher's slide or the team app's calendar and Anchor turns it into real entries. No retyping.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🏆</div>
+      <h3>Sports &amp; progress</h3>
+      <p>Practices, games, and lessons on the calendar — plus metrics like dash times and throwing velocity, with progress kids can see and celebrate.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🙋</div>
+      <h3>Kid requests</h3>
+      <p>Sleepover? Play date? Kids ask in the app, parents approve, and it lands on the calendar. No more "but I asked you last week!"</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🚗</div>
+      <h3>Rides, sorted</h3>
+      <p>Drop-off and pick-up on any event — so everyone knows the coach is bringing them home on Wednesday.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🌟</div>
+      <h3>Streaks &amp; rewards</h3>
+      <p>Daily exercises and checklists build streaks; finishing everything can earn a reward request. Push them to be great — gently.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">👨‍👩‍👧‍👦</div>
+      <h3>The whole family, in sync</h3>
+      <p>Everyone with your family code sees the same truth on their own device. Kids get their own view — even on a shared iPad.</p>
+    </div>
+  </div>
+
+  <div class="privacy-strip" id="privacy">
+    <h2>Your family's data is yours. Full stop.</h2>
+    <p>No ads, no analytics, no selling data, no tracking. What you type in lives on your devices and in Apple's iCloud — it never touches our servers, because we don't have any. Only people with your family code can see your family.</p>
+    <p style="margin-top:14px"><a href="privacy.html">Read the plain-language privacy notice →</a></p>
+  </div>
+
+  <p class="beta-note">Anchor is in open beta. It's free while we build it with real families — your feedback shapes what ships next. Questions? <a href="mailto:stephen@slicerack.com" style="color:var(--blue);font-weight:700;text-decoration:none">stephen@slicerack.com</a></p>
+</main>
+
+<footer>
+  © 2026 Slicerack LLC · <a href="mailto:stephen@slicerack.com">Contact</a> · <a href="privacy.html">Privacy</a>
+</footer>
+
+</body>
+</html>
